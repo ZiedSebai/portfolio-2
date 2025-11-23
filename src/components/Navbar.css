@@ -1,0 +1,114 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    background-color: var(--color-white);
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.logo-section {
+    padding: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 3px solid var(--color-border);
+    min-width: 200px;
+}
+
+.logo {
+    color: var(--color-white);
+    background-color: var(--color-bg-dark);
+    border-radius: var(--radius-pill);
+    border-bottom-right-radius: 0;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+}
+
+.links-section {
+    flex: 1;
+    background-color: var(--color-bg-dark);
+    padding: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+    border-top-left-radius: var(--radius-xl);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-xs);
+    flex-wrap: wrap;
+    flex: 1;
+    padding: 0 var(--spacing-sm);
+    background-color: transparent;
+    margin: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--color-white);
+    background: transparent;
+    border: 2px solid var(--color-white);
+    border-radius: var(--radius-pill);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all var(--transition-medium);
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: var(--font-family);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: var(--color-white);
+    color: var(--color-bg-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .logo-section {
+        border-right: none;
+        border-bottom: 3px solid var(--color-border);
+        min-width: unset;
+    }
+
+    .nav-menu {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-link {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .logo {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu {
+        gap: 0.3rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+}

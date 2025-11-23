@@ -1,0 +1,30 @@
+/* Footer Styles */
+.footer {
+    background-color: var(--color-white);
+    color: var(--color-bg-dark);
+    border: 3px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+}
+
+.page-label {
+    text-transform: uppercase;
+}
+
+.page-number {
+    font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer {
+        padding: 1rem 1.5rem;
+        font-size: 0.85rem;
+    }
+}
